@@ -1,4 +1,4 @@
-{% set version = '2.1.2' %}
+{% set version = "2.1.3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tableHTML_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tableHTML/tableHTML_{{ version }}.tar.gz
-  sha256: fcaa0e052b7ffdadac13ea5b07f0b00183c16c6e5449017db2cacfd62cc00675
+  sha256: 2fd9721c4514e73e37fc6fc274bf92ab498af601948f33b8f185827a6bda9996
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -51,9 +51,7 @@ test:
 about:
   home: https://github.com/LyzandeR/tableHTML
   license: MIT
-  summary: A tool to create and style HTML tables with CSS. These can be exported and used in
-    any application that accepts HTML (e.g. 'shiny', 'rmarkdown', 'PowerPoint'). It
-    also provides functions to create CSS files (which also work with shiny).
+  summary: A tool to create and style HTML tables with CSS. These can be exported and used in any application that accepts HTML (e.g. 'shiny', 'rmarkdown', 'PowerPoint'). It also provides functions to create CSS files (which also work with shiny).
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
